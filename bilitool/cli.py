@@ -94,6 +94,12 @@ def cli():
         "--dynamic", default="", help="(default is empty) The dynamic information"
     )
     upload_parser.add_argument(
+        "--copyright",
+        type=int,
+        default=2,
+        help="(default is 2) The copyright type: 1 for original, 2 for reprint",
+    )
+    upload_parser.add_argument(
         "--cdn", default="", help="(default is auto detect) The cdn line"
     )
 
@@ -201,6 +207,7 @@ def cli():
             args.source,
             args.cover,
             args.dynamic,
+            args.copyright,
             args.cdn,
         )
 

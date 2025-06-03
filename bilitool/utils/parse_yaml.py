@@ -15,7 +15,8 @@ def parse_yaml(yaml_path):
     source = data.get("source")
     cover = data.get("cover")
     dynamic = data.get("dynamic")
-    return tid, title, desc, tag, source, cover, dynamic
+    copyright = data.get("copyright", 2)  # Default to 2 (reprint) if not specified
+    return tid, title, desc, tag, source, cover, dynamic, copyright
 
 
 if __name__ == "__main__":
